@@ -123,9 +123,8 @@ FluidSlide.prototype =
 		
 		updateScreenSize : function(){
 			var screenWidth;
-			
-			if($(window).width() >= 980){
-				screenWidth = 910;
+			if($(window).width() >= 980){ // max width of window
+				screenWidth = 980 - this.btnNext.width()*2; // max width of sliding images
 			}else{
 				screenWidth = $(window).width();
 			}
@@ -133,6 +132,7 @@ FluidSlide.prototype =
 			this.list.css({"width":totalWidth});
 			this.item.css({"width":screenWidth});
 			this.scroll.css({"width":screenWidth});
+			console.log($(window).width());
 		},
 		
 		pagingChange : function(pMc,pNum)
