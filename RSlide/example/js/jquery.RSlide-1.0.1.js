@@ -133,7 +133,6 @@ FluidSlide.prototype =
 			this.item.css({"width":screenWidth});
 			this.list.css({"width":totalWidth});
 			this.scroll.css({"width":screenWidth});
-			console.log(screenWidth);
 		},
 		
 		pagingChange : function(pMc,pNum)
