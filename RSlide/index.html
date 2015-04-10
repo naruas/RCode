@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <title>Untitle</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery.RSlide-1.0.1.js"></script>
+</head>
+
+<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css) ;
+		html{font-family:"Nanum Gothic",Helvetica, Arial, Sans-serif;-webkit-text-size-adjust :none}
+  		*{margin:0;padding:0}
+  		ul,ul li{list-style-type:none}
+  		.blind{position:absolute;z-index:-1;text-indent:-9999em;font-size:0;width:0;height:0;visibility:hidden}
+  		.btn{display:inline-blocktext-align:center;color:#fff;outline:none;border:none}
+  		.scroll-wrap{position:relative}
+  		.scroll-wrap .scroll{margin:0 auto;width:500px;position:relative;left:0;overflow:hidden}
+  		.scroll-wrap .list{zoom:1;position:relative}
+  		.scroll-wrap .list:after{content:".";display:block;clear:both;font-size:0;height:0;visibility:none}
+  		.scroll-wrap .item{float:left;position:relative}
+  		.scroll-wrap .item .photo img{width:100%}
+  		.scroll-wrap .item .desc{position:absolute;right:20px;top:20px;font-size:20px;color:#fff;z-index:1}
+  		.scroll-wrap .paging{margin:10px auto;padding:10px;width:300px;text-align:center}
+  		.scroll-wrap .paging a{margin:0 5px;display:inline-block;width:14px;height:14px;background:url(images/indicator_off.png) 0 0 no-repeat}
+		.scroll-wrap .paging a:hover,.scroll-wrap .paging a.on{background-image:url(images/indicator_on.png)}
+  		.scroll-wrap .btn-wrap{}
+  		.scroll-wrap .btn-wrap .btn{position:absolute;width:35px;height:67px;cursor:pointer}
+  		.scroll-wrap .btn-wrap .btn-prev{left:10px;top:50%;margin-top:-60px}
+  		.scroll-wrap .btn-wrap .btn-next{right:10px;top:50%;margin-top:-60px}
+  		
+  		.scroll-wrap .btn-wrap .btn-prev{background:url(images/btn_prev.png) 0 0 no-repeat;left:20px}
+		.scroll-wrap .btn-wrap .btn-next{background:url(images/btn_next.png) 0 0 no-repeat;right:20px}
+		.scroll-wrap .btn-wrap .btn-prev:hover{background-image:url(images/btn_prev_on.png)}
+		.scroll-wrap .btn-wrap .btn-next:hover{background-image:url(images/btn_next_on.png)}
+  		
+  		.comment{padding:30px 20px 50px;}
+  		.comment h1{margin-bottom:20px}
+  		.comment h2{margin-bottom:5px;font-size:13px;font-weight:normal}
+  		.comment h3{margin:40px 0 10px 0}
+  		.comment ol{margin-left:20px}
+  		.comment li{margin-bottom:5px;font-size:12px;line-height:15px}
+  		copyright{display:block;padding:30px 20px;font-size:11px}
+  	</style>
+  	
+<body>
+
+	<div class="comment">
+		<h1>Jquery RSlide Plugin-1.0.1</h1>
+		<h2><b>Author :</b> hiroinaru</h2>
+		<h2><b>Description :</b> This plugin can set a elements to change value of defaults after new Constructor is created.<br /></h2>
+		<h3>How to :</h3>
+		<ol>
+			<li>to create New Constructor</li>
+			<li>to send parameters into Constructor as A Class name of wrapping element , speed and interval only 3 parameters.</li>
+			<li>to override as adding Functions in Instance , if you are expected to extend for another functionality.</li>
+		</ol>
+	</div>
+  	
+	<!-- s : contents -->
+	<div id="fluid-slide" class="scroll-wrap">
+		<div class="scroll">
+			<ul class="list">
+				<li class="item">
+					<div class="photo"><img src="images/img01.jpg" alt="" /></div>
+					<div class="desc">Gallery 01</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img02.jpg" alt="" /></div>
+					<div class="desc">Gallery 02</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img03.jpg" alt="" /></div>
+					<div class="desc">Gallery 03</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img03.jpg" alt="" /></div>
+					<div class="desc">Gallery 04</div>
+				</li>			</ul>
+		</div>
+		<div class="paging">
+			<a href="#nowhere" class="on"><span class="blind">1</span></a>
+			<a href="#nowhere"><span class="blind">2</span></a>
+			<a href="#nowhere"><span class="blind">3</span></a>
+			<a href="#nowhere"><span class="blind">4</span></a>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn btn-prev"><span class="blind">prev</span></button>
+			<button type="button" class="btn btn-next"><span class="blind">next</span></button>
+		</div>
+	</div>
+	<!-- e : contents -->
+	
+	<copyright>© 2015 Hiroinaru Developed by R</copyright>
+    
+    
+    <script>
+    	$(document).ready(function(){
+    		
+    		/* function updateScreenSize()
+    		{
+    			var screenWidth;
+    			
+    			if($(window).width() < 768){
+    				screenWidth =  $(window).width()-30;
+    				if($(".tms-main-scroll").css("left") == "35px"){
+    					screenWidth =  screenWidth-35;
+    				}
+    			}else if($(window).width() >= 980){
+    				screenWidth = 910;
+    			}else{
+    				screenWidth =  $(window).width()-65;
+    			}
+    			
+    			var evt_totalWidth = screenWidth * $(".tms-main-item").length;
+    			$(".tms-main-list").css({"width":evt_totalWidth});
+    			$(".tms-main-item").css({"width":screenWidth});
+    			$(".tms-main-scroll").css({"width":screenWidth});
+    		} */
+    		
+    		var fluidSlide = new FluidSlide($("#fluid-slide") , 500 , 5000);
+    		fluidSlide.updateScreenSize();
+    		
+    		$(window).resize(function(){
+    			fluidSlide.updateScreenSize();
+     		});
+
+    	});
+    </script>
+    
+</body>
+</html>
