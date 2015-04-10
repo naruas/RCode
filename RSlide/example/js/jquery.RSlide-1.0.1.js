@@ -1,6 +1,6 @@
 
 /**
-*	Jquery RSlide PluginVersion 1.0.1 (2015.04.09)
+*	Jquery RSlide Plugin-1.0.1 (2015.04.09)
 *	Author : hiroinaru
 *	Description : This plugin can set a elements to change value of defaults after new Constructor is created.
 *
@@ -12,10 +12,11 @@
 
 
 function FluidSlide(wrapper,spd,seconds){
-	// var instanceName = new FluidSlide($(".wrapper"),500,3000);
+	
 	this.wrapper = wrapper; // class name for all wrapping element
-	this.list = $(this.wrapper).find("ul"); // moving object list
-	this.item = $(this.wrapper).find("li"); // items
+	this.scroll = $(this.wrapper).find(".scroll"); // moving list
+	this.list = $(this.wrapper).find(".list"); // list wrapper
+	this.item = $(this.wrapper).find(".item"); // items
 	this.btnNext = $(this.wrapper).find(".btn-next"); // right button
 	this.btnPrev = $(this.wrapper).find(".btn-prev"); // left button
 	this.paging = $(this.wrapper).find(".paging a"); // page 
@@ -118,6 +119,20 @@ FluidSlide.prototype =
 		endTimer : function()
 		{
 			clearInterval(this.timer);
+		},
+		
+		updateScreenSize : function(){
+			var screenWidth;
+			
+			if($(window).width() >= 980){
+				screenWidth = 910;
+			}else{
+				screenWidth = $(window).width();
+			}
+			var totalWidth = screenWidth * this.item.length;
+			this.list.css({"width":totalWidth});
+			this.item.css({"width":screenWidth});
+			this.scroll.css({"width":screenWidth});
 		},
 		
 		pagingChange : function(pMc,pNum)
