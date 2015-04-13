@@ -1,15 +1,15 @@
 #Jquery.RSlide
 ============
-##A simple, auto slide animation jQuery plugin for Desktop and Mobile
+###A simple, auto slide animation jQuery plugin for Desktop and Mobile
 
-##Include
+####Include
 
 ```
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 ```
 
-##Installation
+####Installation
 Include script after the jQuery library
 
 ```
