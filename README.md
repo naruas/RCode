@@ -17,3 +17,10 @@ Include js and css after the jQuery library
 <link type="text/css" rel="stylesheet" href="css/RSlide.css" />
 ```
 
+####Usage
+
+Create new Constructor :
+'''
+var mySlide = new FluidSlide($(".className"),speed,interval);
+'''
+
