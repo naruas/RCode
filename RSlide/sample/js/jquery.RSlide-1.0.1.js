@@ -132,8 +132,8 @@ FluidSlide.prototype =
 		
 		updateScreenSize : function(){
 			var screenWidth;
-			if($(window).width() >= 980){ // max width of window
-				screenWidth = 980 - this.btnNext.width()*2; // max width of sliding images
+			if($(window).width() >= 980){ // max width of sliding images
+				screenWidth = 980 - this.btnNext.width()*2; // value excepted both button's width 
 			}else{
 				screenWidth = $(window).width();
 			}
