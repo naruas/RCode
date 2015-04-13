@@ -20,7 +20,7 @@ Include js and css after the jQuery library
 
 ####Usage
 Create Markup Structure :
-```
+```html
 <div id="fluid-slide" class="scroll-wrap">
 		<div class="scroll">
 			<ul class="list">
