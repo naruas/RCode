@@ -11,6 +11,7 @@ A simple, auto slide animation jQuery plugin for Desktop and Mobile
 ```
 
 ####Installation
+
 Include js and css after the jQuery library
 
 ```javascript
@@ -19,6 +20,7 @@ Include js and css after the jQuery library
 ```
 
 ####Usage
+
 Create Markup Structure :
 ```html
 <!-- s : contents -->
