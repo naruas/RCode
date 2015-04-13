@@ -10,7 +10,7 @@
 ```
 
 ####Installation
-Include script after the jQuery library
+Include js and css after the jQuery library
 
 ```
 <script type="text/javascript" src="js/jquery.RSlide-1.0.1.js"></script>
