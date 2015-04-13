@@ -3,7 +3,7 @@
 A simple, auto slide animation jQuery plugin for Desktop and Mobile
 
 
-####Include
+Include
 ===============
 
 ```javascript
@@ -11,7 +11,7 @@ A simple, auto slide animation jQuery plugin for Desktop and Mobile
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 ```
 
-####Installation
+Installation
 ===============
 
 Include js and css after the jQuery library
@@ -21,7 +21,7 @@ Include js and css after the jQuery library
 <link type="text/css" rel="stylesheet" href="css/RSlide.css" />
 ```
 
-####Usage
+Usage
 ===============
 
 Create Markup Structure :
