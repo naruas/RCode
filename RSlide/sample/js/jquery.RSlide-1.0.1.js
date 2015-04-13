@@ -153,8 +153,8 @@ FluidSlide.prototype =
 		},
 
 		/*
-		 *  Below is additional functionality as override so that continuously to make new functions as below. 
-		 *  to override as adding Functions where Class Instance is created , if you are expected to extend for another functionality.
+		 *  Below is additional functions as override so that continuously to make new functions. 
+		 *  to override as adding functions where Class Instance is created , if you are expected to extend for another function.
 		 */
 		bgColorChange : function(pNum){
 			// base
