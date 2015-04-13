@@ -19,7 +19,41 @@ Include js and css after the jQuery library
 ```
 
 ####Usage
-
+Create Markup Structure :
+```
+<div id="fluid-slide" class="scroll-wrap">
+		<div class="scroll">
+			<ul class="list">
+				<li class="item">
+					<div class="photo"><img src="images/img01.jpg" alt="" /></div>
+					<div class="desc">Gallery 01</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img02.jpg" alt="" /></div>
+					<div class="desc">Gallery 02</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img03.jpg" alt="" /></div>
+					<div class="desc">Gallery 03</div>
+				</li>
+				<li class="item">
+					<div class="photo"><img src="images/img03.jpg" alt="" /></div>
+					<div class="desc">Gallery 04</div>
+				</li>
+			</ul>
+		</div>
+		<div class="paging">
+			<a href="#nowhere" class="on"><span class="blind">1</span></a>
+			<a href="#nowhere"><span class="blind">2</span></a>
+			<a href="#nowhere"><span class="blind">3</span></a>
+			<a href="#nowhere"><span class="blind">4</span></a>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="btn btn-prev"><span class="blind">prev</span></button>
+			<button type="button" class="btn btn-next"><span class="blind">next</span></button>
+		</div>
+	</div>
+```
 Create new Constructor :
 ```javascript
 var mySlide = new FluidSlide($(".className"),speed,interval);
