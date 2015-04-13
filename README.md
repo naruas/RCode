@@ -61,6 +61,6 @@ Create Markup Structure :
 ```
 Create new Constructor :
 ```javascript
-var mySlide = new FluidSlide($(".className"),speed,interval);
+var mySlide = new FluidSlide($(".className") , speed , interval);
 ```
 
