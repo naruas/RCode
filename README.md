@@ -4,7 +4,6 @@ A simple, auto slide animation jQuery plugin for Desktop and Mobile
 
 
 ####Include
----
 
 ```javascript
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -12,7 +11,6 @@ A simple, auto slide animation jQuery plugin for Desktop and Mobile
 ```
 
 ####Installation
----
 
 Include js and css after the jQuery library
 
@@ -22,7 +20,6 @@ Include js and css after the jQuery library
 ```
 
 ####Usage
----
 
 Create Markup Structure :
 ```html
