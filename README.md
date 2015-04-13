@@ -1,4 +1,4 @@
-#Jquery.RSlide
+#jQuery.RSlide
 ============
 ###A simple, auto slide animation jQuery plugin for Desktop and Mobile
 
