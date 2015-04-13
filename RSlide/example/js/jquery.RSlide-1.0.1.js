@@ -53,7 +53,18 @@ function FluidSlide(wrapper,spd,seconds){
 			$this.startTimer();
 		}
 	});
-
+	
+	this.list.on({
+		"swipeleft" : function(e){
+			$this.rotateNext($this);
+			console.log(e.type);
+		},
+		"swiperight" : function(e){
+			$this.rotatePrev($this);
+			console.log(e.type);
+		}
+	});
+	
 	this.startTimer();
 };
 
