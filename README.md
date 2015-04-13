@@ -20,7 +20,7 @@ Include js and css after the jQuery library
 ####Usage
 
 Create new Constructor :
-'''
+```
 var mySlide = new FluidSlide($(".className"),speed,interval);
-'''
+```
 
