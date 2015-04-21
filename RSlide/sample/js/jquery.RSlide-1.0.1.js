@@ -53,17 +53,8 @@ function FluidSlide(wrapper,spd,seconds){
 			$this.startTimer();
 		}
 	});
-	
-	this.list.on({
-		"swipeleft" : function(e){
-			$this.rotateNext($this);
-		},
-		"swiperight" : function(e){
-			$this.rotatePrev($this);
-		}
-	});
-	
-	this.startTimer();
+
+	this.setInit();
 };
 
 FluidSlide.prototype = 
@@ -132,16 +123,16 @@ FluidSlide.prototype =
 		
 		updateScreenSize : function(){
 			var screenWidth;
-			if($(window).width() >= 980){ // max width of sliding images
-				screenWidth = 980 - this.btnNext.width()*2; // value excepted both button's width 
+			if($(window).width() >= 980){ // max width of window
+				screenWidth = 980 - this.btnNext.width()*2; // max width of sliding images
 			}else{
 				screenWidth = $(window).width();
 			}
-			
 			var totalWidth = screenWidth * this.item.length;
-			this.item.css({"width":screenWidth});
 			this.list.css({"width":totalWidth});
+			this.item.css({"width":screenWidth});
 			this.scroll.css({"width":screenWidth});
+			console.log($(window).width());
 		},
 		
 		pagingChange : function(pMc,pNum)
@@ -153,8 +144,8 @@ FluidSlide.prototype =
 		},
 
 		/*
-		 *  Below is additional functions as override so that continuously to make new functions. 
-		 *  to override as adding functions where Class Instance is created , if you are expected to extend for another function.
+		 *  Below is additional functionality as override so that continuously to make new functions as below. 
+		 *  to override as adding Functions where Class Instance is created , if you are expected to extend for another functionality.
 		 */
 		bgColorChange : function(pNum){
 			// base
@@ -170,6 +161,13 @@ FluidSlide.prototype =
 			// add overriding functions
 			this.bgColorChange(pNum);
 			this.txtChange(pNum);
+		},
+		
+		setInit : function(){
+			if(this.scroll.width() !=null){
+				this.scroll.css("visibility","visible");
+				this.startTimer();
+			}
 		}
 }
 

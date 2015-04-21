@@ -54,7 +54,7 @@ function FluidSlide(wrapper,spd,seconds){
 		}
 	});
 
-	this.startTimer();
+	this.setInit();
 };
 
 FluidSlide.prototype = 
@@ -161,6 +161,13 @@ FluidSlide.prototype =
 			// add overriding functions
 			this.bgColorChange(pNum);
 			this.txtChange(pNum);
+		},
+		
+		setInit : function(){
+			if(this.scroll.width() !=null){
+				this.scroll.css("visibility","visible");
+				this.startTimer();
+			}
 		}
 }
 

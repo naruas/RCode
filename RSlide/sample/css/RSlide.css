@@ -7,7 +7,7 @@ ul,ul li{list-style-type:none}
 .blind{position:absolute;z-index:-1;text-indent:-9999em;font-size:0;width:0;height:0;visibility:hidden}
 .btn{display:inline-blocktext-align:center;color:#fff;outline:none;border:none}
 .scroll-wrap{position:relative}
-.scroll-wrap .scroll{margin:0 auto;width:500px;position:relative;left:0;overflow:hidden}
+.scroll-wrap .scroll{visibility:hidden;margin:0 auto;width:500px;position:relative;left:0;overflow:hidden}
 .scroll-wrap .list{zoom:1;position:relative}
 .scroll-wrap .list:after{content:".";display:block;clear:both;font-size:0;height:0;visibility:none}
 .scroll-wrap .item{float:left;position:relative}

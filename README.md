@@ -49,6 +49,7 @@ Create Markup Structure :
 	<!-- paging -->
 	<div class="paging">
 		<a href="#nowhere" class="on"><span class="blind">1</span></a>
+		<a href="#nowhere" class="reservation"></a>
 		<a href="#nowhere"><span class="blind">2</span></a>
 		<a href="#nowhere"><span class="blind">3</span></a>
 		<a href="#nowhere"><span class="blind">4</span></a>
@@ -61,6 +62,7 @@ Create Markup Structure :
 </div>
 <!-- e : contents -->
 ```
+
 Create new Constructor :
 ```javascript
 var mySlide = new FluidSlide($(".className") , speed , interval);
