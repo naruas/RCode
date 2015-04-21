@@ -143,6 +143,13 @@ FluidSlide.prototype =
 			pMc.eq(pNum).removeClass("on").addClass("on");
 		},
 
+		setInit : function(){
+			if(this.scroll.width() !=null){
+				this.scroll.css("visibility","visible");
+				this.startTimer();
+			}
+		},
+
 		/*
 		 *  Below is additional functionality as override so that continuously to make new functions as below. 
 		 *  to override as adding Functions where Class Instance is created , if you are expected to extend for another functionality.
@@ -161,13 +168,6 @@ FluidSlide.prototype =
 			// add overriding functions
 			this.bgColorChange(pNum);
 			this.txtChange(pNum);
-		},
-		
-		setInit : function(){
-			if(this.scroll.width() !=null){
-				this.scroll.css("visibility","visible");
-				this.startTimer();
-			}
 		}
 }
 
