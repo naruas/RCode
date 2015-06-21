@@ -1,6 +1,6 @@
 
 /**
-*	Jquery RSlide Plugin-1.0.1 (2015.04.09)
+*	Jquery slideNaruas Plugin-1.0.1 (2015.04.09)
 *	Author : hiroinaru
 *	Description : This plugin can set a elements to change value of defaults after new Constructor is created.
 *
